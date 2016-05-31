@@ -1,0 +1,27 @@
+{
+  "name": "rt-mysql-galera-client",
+  "version": "0.0.1",
+  "description": "roytan's mysql galera client with multi-host and pool support",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "roytan",
+    "mysql",
+	"galera",
+	"client",
+	"pool"
+  ],
+  "author": "roytan",
+  "contributors": [
+    {
+      "name": "roytan",
+      "email": "blueness883@163.com"
+    }
+  ],
+  "dependencies": {
+	"lodash": "^4.0.1"
+  },
+  "license": "ISC"
+}
