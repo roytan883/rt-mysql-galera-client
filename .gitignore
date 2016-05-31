@@ -31,3 +31,11 @@ node_modules
 
 # Optional REPL history
 .node_repl_history
+node_modules/
+workspace.xml
+.idea/
+bin/
+gen/
+.classpath
+.log
+.tgz
