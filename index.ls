@@ -81,7 +81,7 @@ exp.prototype.query = (sqlString, values, callback) !->
         if error and self.hostsCount > 1
           inputArgs[inputArgs.length - 1] = !->
           self._queryAgainOnError(inputArgs)
-    console.log("connection [#{connection.threadId}][#{connection.config.host}]")
+#    console.log("connection [#{connection.threadId}][#{connection.config.host}]")
     connection.query.apply(connection, inputArgs)
 
 exp.prototype._queryAgainOnError = (inputArgs) !->
@@ -100,7 +100,7 @@ exp.prototype._queryAgainOnError = (inputArgs) !->
       console.error("[mysql galera] _queryAgainOnError second err2 = ", err2)
       if _.isFunction(cb2) then return cb2(err2)
     else
-      console.log("connection2 [#{connection2.threadId}][#{connection2.config.host}]")
+#      console.log("connection2 [#{connection2.threadId}][#{connection2.config.host}]")
       connection2.query.apply(connection2, inputArgs)
 
 createPool = (mysqlGaleraHostsArray, user, password, database) ->

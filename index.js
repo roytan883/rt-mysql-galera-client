@@ -93,7 +93,6 @@ exp.prototype.query = function(sqlString, values, callback){
         }
       };
     }
-    console.log("connection [" + connection.threadId + "][" + connection.config.host + "]");
     connection.query.apply(connection, inputArgs);
   });
 };
@@ -120,7 +119,6 @@ exp.prototype._queryAgainOnError = function(inputArgs){
         return cb2(err2);
       }
     } else {
-      console.log("connection2 [" + connection2.threadId + "][" + connection2.config.host + "]");
       connection2.query.apply(connection2, inputArgs);
     }
   });
