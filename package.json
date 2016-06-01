@@ -1,8 +1,15 @@
 {
   "name": "rt-mysql-galera-client",
-  "version": "0.0.1",
+  "version": "0.1.1",
   "description": "roytan's mysql galera client with multi-host and pool support",
   "homepage": "https://github.com/roytan883/rt-mysql-galera-client",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/roytan883/rt-mysql-galera-client.git"
+  },
+  "bugs": {
+    "url": "https://github.com/roytan883/rt-mysql-galera-client/issues"
+  },
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
