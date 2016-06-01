@@ -2,6 +2,7 @@
   "name": "rt-mysql-galera-client",
   "version": "0.0.1",
   "description": "roytan's mysql galera client with multi-host and pool support",
+  "homepage": "https://github.com/roytan883/rt-mysql-galera-client",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
