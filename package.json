@@ -1,6 +1,6 @@
 {
   "name": "rt-mysql-galera-client",
-  "version": "0.1.1",
+  "version": "1.0.0",
   "description": "roytan's mysql galera client with multi-host and pool support",
   "homepage": "https://github.com/roytan883/rt-mysql-galera-client",
   "repository": {
