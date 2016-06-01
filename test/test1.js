@@ -4,7 +4,7 @@
  * Date: 2016/5/31
  * Time: 16:52
  */
-var MyGaleraClient, pool;
+var MyGaleraClient, pool, count, now;
 MyGaleraClient = require('../index');
 pool = MyGaleraClient.createPool([
   {
@@ -17,13 +17,23 @@ pool = MyGaleraClient.createPool([
     connectionLimit: 3
   }
 ], 'testuser', '123123', 'test1');
+count = 0;
+now = Date.now();
 setInterval(function(){
+  var thisCount, sql;
   console.log("");
-  console.log(">>>>>>>>> ");
-  pool.query('select * from MyClass LIMIT 1');
-  pool.query('select * from MyClass LIMIT 1', "");
-  pool.query('select * from MyClass LIMIT 1', function(error, results, fields){
-    console.log("out err = " + error);
-    console.log("results = ", results);
+  count += 1;
+  thisCount = count;
+  sql = "";
+  if (thisCount <= 60) {
+    sql = "insert into MyClass (name,sex,degree) values('" + now + "-" + thisCount + "',0,0)";
+  } else {
+    sql = "select count(*) from MyClass where name like '%" + now + "%'";
+  }
+  console.log(">>>>>>>> runCount = ", thisCount);
+  pool.query(sql, function(error, results, fields){
+    console.log("out error = ", error);
+    console.log("out results = ", results);
+    console.log("<<<<<<<< runCount = ", thisCount);
   });
 }, 1000);
